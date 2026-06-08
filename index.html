@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noah Blum - Professional Portfolio</title>
+    <title>Noah Blum — Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -14,65 +15,78 @@
                 <a href="index.html">Noah Blum</a>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <header class="hero">
+        <!-- Subtle grid decoration -->
+        <div class="hero-grid" aria-hidden="true">
+            <svg viewBox="0 0 400 400" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#c06a3a" stroke-width="0.5"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)"/>
+            </svg>
+        </div>
+
         <div class="hero-content">
-            <h1>Noah Blum</h1>
-            <p class="subtitle">Computer Science Professional | Software Engineer</p>
-            <p class="description">Building innovative solutions through code and engineering.</p>
+            <div class="hero-eyebrow">
+                <div class="hero-eyebrow-line"></div>
+                <span>Computer Science Professional</span>
+            </div>
+            <h1>Noah <em>Blum</em></h1>
+            <p class="subtitle">Software Engineer &amp; Builder</p>
+            <p class="description">Designing and developing robust software solutions across multiple paradigms.</p>
+            <div class="hero-actions">
+                <a href="projects.html" class="btn btn-primary">View Projects</a>
+                <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+            </div>
         </div>
     </header>
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <h2>Professional Summary</h2>
+            <div class="about-header">
+                <h2>About</h2>
+                <div class="about-header-rule"></div>
+            </div>
             <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I am a dedicated Computer and Information Sciences professional with a demonstrated proficiency in designing and developing robust software solutions. My technical expertise spans multiple programming paradigms, including object-oriented design, functional programming, and systems-level development. I am passionate about leveraging technology to solve real-world problems and committed to continuous professional growth in the fields of Software Engineering and emerging technologies.
-                    </p>
-                    <h3>Technical Proficiency</h3>
-                    <ul class="skills-list">
-                        <li><strong>Languages:</strong> Python, Java, JavaScript, C++</li>
-                        <li><strong>Web Technologies:</strong> HTML5, CSS3, JavaScript (ES6+), Responsive Design</li>
-                        <li><strong>Machine Learning:</strong> Python (Scikit-learn, TensorFlow), NLP, Data Analysis</li>
-                        <li><strong>Game Development:</strong> JavaScript Game Development</li>
-                        <li><strong>Desktop Applications:</strong> Java Swing, GUI Design</li>
-                        <li><strong>Development Practices:</strong> Version Control (Git), Object-Oriented Programming, Code Documentation</li>
-                    </ul>
-                    <h3>Career Interests</h3>
-                    <p>
-                        I am actively pursuing opportunities in Software Engineering, with particular interests in machine learning applications, and systems programming. I am eager to contribute to innovative projects that combine technical rigor with practical problem-solving.
-                    </p>
+                <p class="about-intro reveal">
+                    I'm a Computer and Information Sciences professional with a demonstrated proficiency in designing and developing robust software solutions. My work spans object-oriented design, functional programming, and systems-level development — with a focus on technology that solves real problems.
+                </p>
+
+                <div class="section-label reveal">Technical Proficiency</div>
+                <div class="skills-grid reveal">
+                    <div class="skill-row"><strong>Languages</strong> Python, Java, JavaScript, C++</div>
+                    <div class="skill-row"><strong>Web</strong> HTML5, CSS3, JavaScript ES6+</div>
+                    <div class="skill-row"><strong>Machine Learning</strong> Scikit-learn, TensorFlow, NLP</div>
+                    <div class="skill-row"><strong>Game Dev</strong> JavaScript Canvas, Game Loop Patterns</div>
+                    <div class="skill-row"><strong>Desktop Apps</strong> Java Swing, GUI Design</div>
+                    <div class="skill-row"><strong>Practices</strong> Git, OOP, Code Documentation</div>
                 </div>
+
+                <div class="section-label reveal">Career Interests</div>
+                <p class="reveal">Actively pursuing opportunities in Software Engineering, with particular interests in machine learning applications and systems programming. Eager to contribute to projects that combine technical rigor with practical problem-solving.</p>
             </div>
         </div>
     </section>
 
-    <!-- Quick Stats -->
+    <!-- Stats -->
     <section class="stats">
         <div class="container">
             <div class="stat-item">
-                <h3>4+</h3>
+                <h3>5+</h3>
                 <p>Projects Completed</p>
             </div>
             <div class="stat-item">
@@ -86,12 +100,16 @@
         </div>
     </section>
 
-    <!-- Call to Action -->
+    <!-- CTA -->
     <section class="cta">
         <div class="container">
-            <h2>Explore My Work</h2>
-            <p>Take a closer look at the projects that showcase my technical expertise and problem-solving abilities.</p>
-            <a href="projects.html" class="btn btn-primary">View Projects</a>
+            <div class="cta-inner">
+                <div>
+                    <h2>Explore My Work</h2>
+                    <p>A selection of projects showcasing my technical expertise and problem-solving abilities.</p>
+                </div>
+                <a href="projects.html" class="btn btn-primary">View Projects</a>
+            </div>
         </div>
     </section>
 
@@ -106,6 +124,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
