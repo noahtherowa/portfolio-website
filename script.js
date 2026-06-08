@@ -148,4 +148,23 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     btn.addEventListener('mouseover', () => btn.style.transform = 'scale(1.1)');
     btn.addEventListener('mouseout',  () => btn.style.transform = 'scale(1)');
+
+    // ==========================================
+    // PROJECT DEMO VIDEO TOGGLE
+    // ==========================================
+    window.toggleDemo = function(btn) {
+        const video = btn.closest('.project-content').querySelector('.demo-video');
+        const isHidden = video.style.display === 'none';
+        video.style.display = isHidden ? 'block' : 'none';
+        btn.textContent = isHidden ? '✕ Hide Demo' : '▶ Watch Demo';
+        if (!isHidden) {
+            video.querySelector('video').pause();
+        }
+    };
+     window.toggleScreenshots = function(btn) {
+        const panel = btn.closest('.project-content').querySelector('.demo-screenshots');
+        const isHidden = panel.style.display === 'none';
+        panel.style.display = isHidden ? 'block' : 'none';
+        btn.textContent = isHidden ? '✕ Hide Screenshots' : '🖼 View Screenshots';
+    };
 });
